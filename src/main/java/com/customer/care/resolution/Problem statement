@@ -1,6 +1,6 @@
 Customer Issue Resolution System
-PhonePe serves millions of transactions every day, some of these transactions fail (FAILED state) or
-remain in PENDING state due to multiple issues like Bank failure, NPCI issue or some internal PhonePe errors.
+Company serves millions of transactions every day, some of these transactions fail (FAILED state) or
+remain in PENDING state due to multiple issues like Bank failure, NPCI issue or some internal errors.
 
 You have to design a system for issue resolution where customers can raise the issue against any such
 unsuccessful transactions. Customer Issues can be classified into multiple types like Payment Related,
