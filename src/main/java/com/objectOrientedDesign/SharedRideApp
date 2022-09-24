@@ -18,7 +18,7 @@ _____________________________________________________________
 [] => ENUMS
 
 Players : 
-Account: userId, userType, *wallet*, [accountStatus]
+Account: userId, userPlan, *wallet*, [accountStatus]
 Rider: Id, name email, phone, location[lat, long]
 Driver : Id, name , phone, carId, location[], seatsLeft[0-n], currentTrip
 Car: id, driverId, seats,*cost/km*
@@ -47,7 +47,7 @@ System(app)/Tripmanager:  (APIs)
 
 
 Players : 
-Account: userId, userType, *wallet*, [accountStatus]
+Account: userId, userPlan, *wallet*, [accountStatus]
 Rider: Id, name email, phone, location[lat, long]
 Driver : Id, name , phone, List<carId>, currentTrip(tripId)
 DriverManager: driverId, List<tripId>
