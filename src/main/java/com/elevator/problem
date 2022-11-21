@@ -1,0 +1,95 @@
+Consider a building with 10 floors and an elevator with infinite carrying capacity.
+
+At every floor, there is a button panel with 2 buttons (UP and DOWN). People can press the buttons at the floor level to summon the elevator (request pickup).
+
+People can press one of the 10 buttons inside the elevator to stop it at the desired floor (request Drop).
+
+The elevator takes a time of 1 s to travel from one floor to the next. When it stops at a floor, it waits there for 5 s for people to board or de-board.
+
+We need to design a system to manage the setup.
+
+
+
+Elevator functions to complete:
+requestPickup(int pickupFloor, Direction requestedDirection)
+requestDrop(int dropFloor)
+
+The elevator state needs to be displayed whenever it changes.
+
+Sample output:
+
+Elevator is waiting at floor 1.
+
+Elevator started moving UP.
+
+Elevator crossed floor 2.
+
+Elevator is waiting at floor 3.
+
+Elevator started moving DOWN.
+
+
+
+Example:
+
+
+
+requestPickup(0, UP)
+
+requestDrop(5)
+
+While the elevator was crossing the 2nd Floor,
+
+requestPickup(3, UP)
+
+
+
+Expected Output:
+
+
+
+Elevator is waiting at floor 0.
+
+Elevator started moving UP.
+
+Elevator crossed floor 1.
+
+Elevator crossed floor 2.
+
+Elevator is waiting at floor 3.
+
+Elevator started moving UP.
+
+Elevator crossed floor 4.
+
+Elevator is waiting at floor 5.
+
+ADD ON 1:
+
+Add functionality to cancel a placed request (both through the floor and elevator buttons).
+
+
+
+Elevator functions to complete:
+
+cancelPickup(int pickupFloor, Direction requestedDirection)
+
+cancelDrop(int dropFloor)
+
+
+
+ADD ON 2:
+
+There can be more than one elevators trying to serve the requests as efficiently as possible. Implement the system in such a way that the elevator assignment logic can be changed dynamically at run time without application restart.
+
+
+
+ElevatorManager functions to complete:
+
+chooseElevatorForPickup(int pickupFloor, Direction requestedDirection)
+
+changeToRoundRobinAssignment()
+
+changeToOptimalAssignment()
+
+cancelPickUp(int pickupFloor, Direction requestedDirection)

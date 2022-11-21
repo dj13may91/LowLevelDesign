@@ -1,0 +1,85 @@
+  Model a cards.Card Game
+
+Rules
+- Pack of 52 playing cards
+- 4 Suites Spades,Clubs,Hearts,Diamonds
+- Ace being highest and 2 being lowest value
+- Assume the number of players in the code - N
+- Number of rounds played to be calculated based on number of players.
+- Select a random playing order of players.
+- Shuffle the deck only once before starting the game.
+- Randomise a suite for every round - cards.constants.Suite takes priority over other suites
+- Every player gets dealt a card from the top of the deck for each round
+- Cards played once need to be discarded
+- Winner of the previous round plays first in the next round
+- In case of draw repeat the same order
+
+
+- The winner is decided in this order
+  -  highest numerical value of trump suite
+   - highest numerical value
+   - in case of a tie
+      - Highest value of color of suite wine.
+   - Discard the round and don’t declare winner.Play again.
+
+
+
+
+
+Heart Diamonds
+Spades Clubs
+
+Sample output -
+
+
+Round0
+cards.constants.Suite suite - Spades
+Cards - S2,HA,HJ,DA
+Winner -> S2
+
+
+Round 0a
+cards.constants.Suite suite - Spades
+Cards - S2,S5,HJ,DA
+Winner -> S5
+
+Round1
+cards.constants.Suite suite - Spades
+Cards - C2,C3,H10,DA
+Winner -> DA
+
+If there is a contention (tie) - Highest value of color of suite wins.
+
+Round2
+cards.constants.Suite suite - Spades
+Cards - C2,HA,H10,DA
+Winner -> C2
+
+Round3
+cards.constants.Suite suite - Spades
+Cards - C2,HA,C5,DA
+Winner -> C5
+
+
+Round4
+cards.constants.Suite suite - Spades
+Cards - D2,HA,HJ,DA
+Winner -> -
+(discard the round)
+
+Round5
+cards.constants.Suite suite - Spades
+Cards - HA,H2,DA,D2
+Winner -> -
+(discard the round)
+
+
+
+Playing order is
+
+A,B,C,D  W: D
+D,A,B,C  W: A
+A B C D  W: C
+C D A B
+
+
