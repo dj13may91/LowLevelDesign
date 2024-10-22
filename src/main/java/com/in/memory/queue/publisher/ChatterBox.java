@@ -55,7 +55,7 @@ public class ChatterBox {
                 topic.getConsumerGroup(consumer.getConsumerGroupId()).getConsumerList().parallelStream()
                         .forEach(c -> c.setOffset(topic.getMessageProcessor().findOffset()));
             } else {
-                System.out.println("<discarded by filters> <M>" + message + "; <C>: " + consumer.getConsumerName() + ",<CG>: " + consumer.getConsumerGroupId());
+                System.out.println(consumer.getConsumerGroupId() + "<discarded by filters> <M>" + message + "; <C>: " + consumer.getConsumerName() + ",<CG>: " + consumer.getConsumerGroupId());
             }
             consumer.setOffset(topic.getMessageProcessor().findOffset());
         }
